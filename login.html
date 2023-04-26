@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form" action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <input type="checkbox" name="remember_me" id="remember_me">
+            <label for="remember_me">Remember me</label>
+            <button type="submit">Login</button>
+        </form>
+        <?php if (isset($error)): ?>
+        <p class="error-message">
+            <?php echo $error; ?>
+        </p>
+        <?php endif; ?>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
